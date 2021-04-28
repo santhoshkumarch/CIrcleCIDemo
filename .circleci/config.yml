@@ -7,7 +7,7 @@ jobs:
   build-job:
     docker:
       # specify the version you desire here
-      - image: circleci/node:10.8.0
+      - image: circleci/node:14.16.0
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -37,7 +37,7 @@ jobs:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }} 
 
       # run tests!
-      - run: yarn run test:unit 
+      # - run: yarn run test:unit 
 
   # deploy-job:
   #      docker:
